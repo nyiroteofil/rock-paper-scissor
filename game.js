@@ -39,3 +39,4 @@ if (playerScore === 3) {
 console.log(`${winner} won the game!`);
 }
 
+game();
