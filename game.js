@@ -15,4 +15,3 @@ function playRound(playerChoice, computerChoice) {
     }
 }
 
-console.log(computerPlay());
