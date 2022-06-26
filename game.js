@@ -6,7 +6,7 @@ function computerPlay() {
 
 function playRound(playerChoice, computerChoice) {
     /*Making user input case insensitive*/ 
-    let /*Case Insesitive playerChice*/ CIP = player.ToLower(); 
+    let /*Case Insesitive playerChice*/ CIP = playerChoice.ToLower(); 
 
     if (CIP === "rock" && computerChoice === "scissor" || CIP === "paper" && computerChoice === "rock"|| CIP === "scissor" && computerChoice === "paper") {
         return `You win! ${playerChoice} beats ${computerChoice}`;
