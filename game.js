@@ -9,11 +9,13 @@ function playRound(playerChoice, computerChoice) {
     let /*Case Insesitive playerChice*/ CIP = playerChoice.toLowerCase(); 
 
     if (CIP === "rock" && computerChoice === "scissor" || CIP === "paper" && computerChoice === "rock"|| CIP === "scissor" && computerChoice === "paper") {
-        return `You win! ${playerChoice} beats ${computerChoice}`;
+        return `You win! ${playerChoice} beats ${computerChoice}!`;
         playerScore++;
+        console.log(`Round: ${playerScore + compScore} Your score: ${playerScore} : Enemy's score: ${compScore}`);
     } else {
-        return `You lost! ${computerChoice} beats ${playerChoice}\n Round: ${playerScore + compScore}\nYour score: ${playerScore} : Enemy's score: ${compScore}`;
+        return `You lost! ${computerChoice} beats ${playerChoice}!`;
         compScore++;
+        console.log(`Round: ${playerScore + compScore} Your score: ${playerScore} : Enemy's score: ${compScore}`);
     }
 }
 
