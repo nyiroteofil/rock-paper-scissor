@@ -1,3 +1,7 @@
+const playerScore = 0;
+const compScore =  0;
+const winner = "";
+
 function computerPlay() {
     let options = ["rock", "paper", "scissor"];
     let R = Math.floor(Math.random() * 3);
@@ -23,15 +27,12 @@ function playRound(playerChoice, computerChoice) {
 }
 
 function game() {
-const playerScore = 0;
-const compScore =  0;
-const winner = "";
 
 for (let i = 0; i < 5; i++) {
     console.log(`Round: ${i}
     Your score: ${playerScore} : Enemy's score: ${compScore}`);
     let playerChoice = prompt("What is your weapos of choice? :", "rock");
-    playRound(playerChoice, computerPlay);
+    playRound(playerChoice, computerPlay());
 }
 
 if (playerScore === 3) {
