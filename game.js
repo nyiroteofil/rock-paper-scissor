@@ -35,7 +35,7 @@ for (let i = 0; i < 5; i++) {
     playRound(playerChoice, computerPlay());
 }
 
-if (playerScore === 3) {
+if (playerScore >== 3) {
     winner = "you";
 } else {
     winner = "the computer";
