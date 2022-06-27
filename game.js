@@ -1,6 +1,6 @@
-const playerScore = 0;
-const compScore =  0;
-const winner = "";
+let playerScore = 0;
+let compScore =  0;
+let winner = "";
 
 function computerPlay() {
     let options = ["rock", "paper", "scissor"];
