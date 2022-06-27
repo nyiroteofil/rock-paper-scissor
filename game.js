@@ -9,13 +9,16 @@ function playRound(playerChoice, computerChoice) {
     let /*Case Insesitive playerChice*/ CIP = playerChoice.toLowerCase(); 
 
     if (CIP === "rock" && computerChoice === "scissor" || CIP === "paper" && computerChoice === "rock"|| CIP === "scissor" && computerChoice === "paper") {
-        return `You win! ${playerChoice} beats ${computerChoice}!`;
         playerScore++;
-        console.log(`Round: ${playerScore + compScore} Your score: ${playerScore} : Enemy's score: ${compScore}`);
+        return `You win! ${playerChoice} beats ${computerChoice}!
+        Round: ${playerScore + compScore} Your score: ${playerScore} : Enemy's score: ${compScore}
+        `;
     } else {
-        return `You lost! ${computerChoice} beats ${playerChoice}!`;
         compScore++;
-        console.log(`Round: ${playerScore + compScore} Your score: ${playerScore} : Enemy's score: ${compScore}`);
+        return `You lost! ${computerChoice} beats ${playerChoice}!
+        Round: ${playerScore + compScore} Your score: ${playerScore} : Enemy's score: ${compScore}
+        `;
+        
     }
 }
 
@@ -24,11 +27,10 @@ const playerScore = 0;
 const compScore =  0;
 const winner = "";
 
-console.log(`Round: ${playerScore + compScore}\nYour score: ${playerScore} : Enemy's score: ${compScore}`)
-
-while (playerScore < 3 && compScore < 3) {
+for (let i = 0; i < 5; i++) {
+    console.log(`Round: ${i}
+    Your score: ${playerScore} : Enemy's score: ${compScore}`);
     let playerChoice = prompt("What is your weapos of choice? :", "rock");
-
     playRound(playerChoice, computerPlay);
 }
 
