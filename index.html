@@ -2,8 +2,31 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <script src="game.js"></script>
+        <script src="game.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="./rps_style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <h1>Rock    Paper   Scissor</h1>
+        <div classd="buttons">
+            <button id="rock"><img src="https://static.thenounproject.com/png/477914-200.png" alt="rock"></button>
+            <button id="paper"><img src="https://brendan-fisher.github.io/rock_paper_scissors/images/paper.png" alt="paper"></button>
+            <button id="scissor"><img src="https://static.thenounproject.com/png/477919-200.png" alt="scissor"></button>
+        </div>
+        <hr>
+        <div class="scores">
+           <h2 id="Round">Current round</h2>
+           <p id="rCounter">0</p>
+           <h2 id="playerScoreParrent">Your score</h2>
+           <p id="playerScore">0</p>
+           <h2>Enemy's score</h2>
+           <p id="enemyScore">0</p>
+        </div>
+        <hr>
+        <div id="results">
+        </div>
+        <hr>
     </body>
 </html>
