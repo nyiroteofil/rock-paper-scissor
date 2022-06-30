@@ -60,6 +60,8 @@ if (pScore.textContent >= 5) {
     let scissor = document.querySelector('#scissor');
     scissor.id = "endGame";
 
+    
+
 } else if (eScore.textContent >= 5) {
     let outputWinner = document.createElement('p')
     outputWinner.textContent =`Saddly you lost this game...
@@ -76,6 +78,11 @@ if (pScore.textContent >= 5) {
 
     let scissor = document.querySelector('#scissor');
     scissor.id = "endGame";
+} else if (eScore.textContent > 5 || pScore > 5) {
+    
+    let endMsg = document.createElement('h1');
+    endMsg.textContent = 'The game is already over!!!';
+    container.appendChild(endMsg);
 }
 
 const msg = document.createElement('p');
@@ -87,21 +94,29 @@ item.textContent = 'Hi, this is a test'
 container.appendChild(item)
 }
 
+const pscore = document.querySelector('#playerScore');
+const escore = document.querySelector('#enemyScore')
+    
+    let buttonRock = document.querySelector('#rock');
 
-let buttonRock = document.querySelector('#rock');
+    buttonRock.addEventListener('click', () => {
+        if (parseInt(pscore.textContent) < 5 && parseInt(escore.textContent) < 5) {
+            game('rock', computerPlay());
+        }
+    })
 
-buttonRock.addEventListener('click', () => {
-    game('rock', computerPlay());
-})
+    let buttonPaper = document.querySelector('#paper');
 
-let buttonPaper = document.querySelector('#paper');
+    buttonPaper.addEventListener('click', () => {
+        if (parseInt(pscore.textContent) < 5 && parseInt(escore.textContent) < 5) {
+            game('paper', computerPlay());
+        }
+    })
 
-buttonPaper.addEventListener('click', () => {
-    game('paper', computerPlay());
-})
+    let buttonScissor = document.querySelector('#scissor');
 
-let buttonScissor = document.querySelector('#scissor');
-
-buttonScissor.addEventListener('click', () => {
-    game('scissor', computerPlay());
+    buttonScissor.addEventListener('click', () => {
+        if (parseInt(pscore.textContent) < 5 && parseInt(escore.textContent) < 5) {
+            game('scissor', computerPlay());
+        }
 })
